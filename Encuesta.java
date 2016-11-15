@@ -15,7 +15,7 @@ public class Encuesta extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         Encuesta demo = new Encuesta ();
-        demo.setSize(400,550);
+        demo.setSize(400,700);
         demo.crearGUI();
         demo.setTitle("Encuesta");
         demo.setVisible(true);
@@ -123,6 +123,7 @@ public class Encuesta extends JFrame implements ActionListener {
         ventana.add(comentarios);
 
         botonEnviar = new JButton("Enviar");
+		botonEnviar.setAlignmentX(CENTER_ALIGNMENT);
         ventana.add(botonEnviar);
         botonEnviar.setBounds(2, 20, 30, 30);
         botonEnviar.addActionListener(this);
@@ -139,11 +140,11 @@ public class Encuesta extends JFrame implements ActionListener {
     	Object origen= event.getSource(); //permite trabajar con mas de un botón
     	if (origen == botonEnviar)
     	{	
-           if (r3.isSelected()==true)
+           if (r3.isSelected())
            {
                JOptionPane.showMessageDialog(null,"Conformista!");
            }
-           else if(r4.isSelected()==true)
+           else if(r4.isSelected())
            {
 			   JOptionPane.showMessageDialog(null,"Deseales suerte a tus familiares");
 		   }
